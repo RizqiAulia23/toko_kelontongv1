@@ -1,0 +1,17 @@
+# Ignore patterns for ESLint
+
+# Build outputs
+.next/
+dist/
+build/
+
+# Dependencies
+node_modules/
+
+# Scripts (non-TypeScript utility scripts)
+scripts/
+
+# Environment
+.env
+.env.local
+.env.*.local

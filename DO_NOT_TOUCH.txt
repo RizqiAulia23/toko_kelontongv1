@@ -1,0 +1,47 @@
+# DO NOT TOUCH
+
+## Database tables (must remain unchanged)
+- pelanggan
+- produk
+- transaksi
+- tb_admin
+- tb_category
+- tb_product
+- tb_message
+- users
+- password_reset_tokens
+- sessions
+- migrations
+- cache*
+- jobs*
+- failed_jobs
+
+## Laravel application files (must remain unchanged for Phase 0)
+- All files under app/
+- All files under routes/
+- All files under config/
+- All files under database/migrations/
+- All files under database/seeders/
+- public/.htaccess
+- artisan
+- composer.json
+- composer.lock
+- package.json
+- vite.config.js
+- .env.example
+- README.md
+
+## Protected data
+- Existing customer data in pelanggan
+- Legacy product data in produk
+- Transaction history in transaksi
+- Any uploaded product images in storage/app/public/products/
+
+## Prohibited actions in Phase 0
+- php artisan migrate
+- php artisan migrate:fresh
+- php artisan db:seed
+- DROP/TRUNCATE/ALTER TABLE
+- DELETE from protected tables
+- Modifying .env to point to another database
+- Changing table prefixes or connections

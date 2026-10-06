@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+/* Toko Kelontong Design System Foundation */
+:root {
+  --bg: #0b0f17;
+  --s1: #111827;
+  --s2: #1e293b;
+  --primary: #10b981;
+  --secondary: #06b6d4;
+  --tertiary: #14b8a6;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --muted2: #475569;
+  --border: #334155;
+  --danger: #f87171;
+  --warning: #fbbf24;
+}
+
+@theme inline {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --color-primary: rgb(16 185 129);
+  --color-secondary: rgb(6 182 212);
+  --color-tertiary: rgb(20 184 166);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.55;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
