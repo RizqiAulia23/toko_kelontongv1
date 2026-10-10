@@ -82,9 +82,9 @@
             <tr>
               <td>
                 @if(!empty($p->product_image))
-                  <img src="{{ asset('storage/products/' . $p->product_image) }}" alt="" style="width:48px;height:48px;object-fit:cover;border-radius:6px;border:1px solid var(--border);background:var(--s2);">
+                  <img src="{{ asset('storage/products/' . $p->product_image) }}" alt="" style="width:48px;height:48px;object-fit:cover;border-radius:6px;border:1px solid rgba(51,65,85,.5);background:var(--s2);">
                 @else
-                  <div style="width:48px;height:48px;border-radius:6px;background:var(--s2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--muted);"><i class="fa-solid fa-image"></i></div>
+                  <div style="width:48px;height:48px;border-radius:6px;background:var(--s2);border:1px solid rgba(51,65,85,.5);display:flex;align-items:center;justify-content:center;color:var(--muted);"><i class="fa-solid fa-image"></i></div>
                 @endif
               </td>
               <td>

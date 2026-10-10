@@ -7,30 +7,70 @@
 
 @section('main_content')
 <div class="kpis">
-    <div class="kpi green">
-        <div class="kpi-icon"><i class="fa-solid fa-box-archive"></i></div>
-        <div class="kpi-label">Total Produk</div>
-        <div class="kpi-value">{{ $totalProducts }}</div>
-        <div class="kpi-sub">Semua produk terdaftar</div>
-    </div>
-    <div class="kpi cyan">
-        <div class="kpi-icon"><i class="fa-solid fa-circle-check"></i></div>
-        <div class="kpi-label">Produk Aktif</div>
-        <div class="kpi-value">{{ $activeProducts }}</div>
-        <div class="kpi-sub">Tampil di katalog</div>
-    </div>
-    <div class="kpi teal">
-        <div class="kpi-icon"><i class="fa-solid fa-layer-group"></i></div>
-        <div class="kpi-label">Total Kategori</div>
-        <div class="kpi-value">{{ $totalCategories }}</div>
-        <div class="kpi-sub">Kategori produk</div>
-    </div>
-    <div class="kpi amber">
-        <div class="kpi-icon"><i class="fa-solid fa-eye-slash"></i></div>
-        <div class="kpi-label">Produk Nonaktif</div>
-        <div class="kpi-value">{{ $totalProducts - $activeProducts }}</div>
-        <div class="kpi-sub">Disembunyikan</div>
-    </div>
+    <a href="{{ route('products.index') }}" class="kpi-link">
+        <div class="kpi green">
+            <div class="kpi-top">
+                <div>
+                    <div class="kpi-label">Total Produk</div>
+                    <div class="kpi-value">{{ $totalProducts }}</div>
+                    <div class="kpi-sub">Semua produk terdaftar</div>
+                </div>
+                <div class="kpi-icon"><i class="fa-solid fa-box-archive"></i></div>
+            </div>
+            <div class="kpi-foot">
+                <span>Kelola Katalog Produk</span>
+                <span>&rarr;</span>
+            </div>
+        </div>
+    </a>
+    <a href="{{ route('products.index', ['status' => 1]) }}" class="kpi-link">
+        <div class="kpi cyan">
+            <div class="kpi-top">
+                <div>
+                    <div class="kpi-label">Produk Aktif</div>
+                    <div class="kpi-value">{{ $activeProducts }}</div>
+                    <div class="kpi-sub">Tampil di katalog</div>
+                </div>
+                <div class="kpi-icon"><i class="fa-solid fa-circle-check"></i></div>
+            </div>
+            <div class="kpi-foot">
+                <span>Tampil di Katalog</span>
+                <span>&rarr;</span>
+            </div>
+        </div>
+    </a>
+    <a href="{{ route('categories.index') }}" class="kpi-link">
+        <div class="kpi teal">
+            <div class="kpi-top">
+                <div>
+                    <div class="kpi-label">Total Kategori</div>
+                    <div class="kpi-value">{{ $totalCategories }}</div>
+                    <div class="kpi-sub">Kategori produk</div>
+                </div>
+                <div class="kpi-icon"><i class="fa-solid fa-layer-group"></i></div>
+            </div>
+            <div class="kpi-foot">
+                <span>Kelola Kategori</span>
+                <span>&rarr;</span>
+            </div>
+        </div>
+    </a>
+    <a href="{{ route('products.index', ['status' => 0]) }}" class="kpi-link">
+        <div class="kpi amber">
+            <div class="kpi-top">
+                <div>
+                    <div class="kpi-label">Produk Nonaktif</div>
+                    <div class="kpi-value">{{ $totalProducts - $activeProducts }}</div>
+                    <div class="kpi-sub">Disembunyikan</div>
+                </div>
+                <div class="kpi-icon"><i class="fa-solid fa-eye-slash"></i></div>
+            </div>
+            <div class="kpi-foot">
+                <span>Disembunyikan</span>
+                <span>&rarr;</span>
+            </div>
+        </div>
+    </a>
 </div>
 
 <div class="grid-2">
